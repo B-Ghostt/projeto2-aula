@@ -1,28 +1,32 @@
-// Salvar dados
-function salvarDados(nome, telefone, data, hora, servico) {
-  let cadastros = JSON.parse(localStorage.getItem("cadastros")) || [];
-  let agendamentos = JSON.parse(localStorage.getItem("agendamentos")) || [];
+const agendamentos = []; // Memória temporária (será substituído por banco depois)
 
-  const idCliente = cadastros.length + 1;
+document.getElementById("agendamento-form").addEventListener("submit", function (e) {
+  e.preventDefault();
 
-  const cliente = { id: idCliente, nome, telefone };
-  cadastros.push(cliente);
-  localStorage.setItem("cadastros", JSON.stringify(cadastros));
+  const nome = document.getElementById("nome").value;
+  const data = document.getElementById("data").value;
+  const hora = document.getElementById("hora").value;
+  const barbeiro = document.getElementById("barbeiro").value;
 
-  const agendamento = { id: agendamentos.length + 1, clienteId: idCliente, nomeCliente: nome, data, hora, servico };
-  agendamentos.push(agendamento);
-  localStorage.setItem("agendamentos", JSON.stringify(agendamentos));
+  // Verifica conflitos
+  const conflito = agendamentos.find(
+    (a) => a.data === data && a.hora === hora && a.barbeiro === barbeiro
+  );
 
-  console.log("Cliente e agendamento salvos com sucesso!");
-}
+  if (conflito) {
+    document.getElementById("confirmacao").innerText =
+      "Horário já reservado para esse barbeiro. Escolha outro horário.";
+    return;
+  }
 
-// Listar agendamentos
-function listarAgendamentosLocal() {
-  const agendamentos = JSON.parse(localStorage.getItem("agendamentos")) || [];
-  agendamentos.forEach(ag => {
-    console.log(`${ag.nomeCliente} - ${ag.data} às ${ag.hora} (${ag.servico})`);
-  });
-}
+  // Salva agendamento
+  const novoAgendamento = { nome, data, hora, barbeiro };
+  agendamentos.push(novoAgendamento);
 
-salvarDados("Carlos Mendes", "1191111-2222", "2025-08-12", "16:00", "Corte + Barba");
-listarAgendamentosLocal();
+  // Mostra confirmação
+  document.getElementById("confirmacao").innerText =
+    `Agendamento confirmado para ${nome} com ${barbeiro} no dia ${data} às ${hora}.`;
+
+  // Limpa formulário
+  document.getElementById("agendamento-form").reset();
+});
