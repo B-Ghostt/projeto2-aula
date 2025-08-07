@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +8,7 @@
 body {
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.6;
-    color: #333333;
+    color: #333;
     background-color: #f5f5f5;
 }
 
@@ -21,7 +22,7 @@ body {
 /* Header */
 header {
     background-color: #111;
-    color: rgb(243, 223, 133);
+    color: white;
     padding: 20px 0;
 }
 
@@ -47,7 +48,7 @@ nav a {
 /* Hero Section */
 .hero {
     background: url('https://images.unsplash.com/photo-1606813909227-d68f5f5c2f2d?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
-    color: rgb(110, 109, 109);
+    color: white;
     padding: 100px 0;
     text-align: center;
 }
