@@ -55,11 +55,13 @@ nav a {
 
 .hero h2 {
     font-size: 2.5rem;
+    color:#333
 }
 
 .hero p {
     margin: 20px 0;
     font-size: 1.2rem;
+    color: #333;
 }
 
 .btn {
@@ -79,7 +81,7 @@ section {
 }
 
 .sobre, .servicos, .contato {
-    background-color: white;
+    background-color: rgb(197, 197, 197);
     margin-top: 20px;
     border-radius: 10px;
     padding: 40px 20px;
