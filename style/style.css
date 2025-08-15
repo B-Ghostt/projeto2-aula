@@ -1,0 +1,142 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+
+@import url("cores/cores.css");
+
+body {
+    font-family: 'Sora', sans-serif;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: var(--preto-100)
+}
+
+/* Container padrão */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Header */
+header {
+    width: 100%;
+    background-color: #111;
+    color: white;
+    padding: 20px 0;
+}
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+i {
+    color: var(--branco-100)
+}
+.header-icons {
+
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://images.unsplash.com/photo-1606813909227-d68f5f5c2f2d?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    color:#333
+}
+
+.hero p {
+    margin: 20px 0;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #d4af37;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+button {
+    font-family: 'Sora' , sans-serif;
+    cursor: pointer;
+
+}
+
+svg{
+    width: 100%;
+}
+img{
+    width: 100%;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+
+}
+
+/* Seções */
+section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.sobre, .servicos, .contato {
+    background-color: rgb(197, 197, 197);
+    margin-top: 20px;
+    border-radius: 10px;
+    padding: 40px 20px;
+}
+
+.servicos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.servicos li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}

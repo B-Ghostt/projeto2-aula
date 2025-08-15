@@ -1,0 +1,25 @@
+:root {
+    /* Pretos */
+    --preto-100: #000000; /* Preto puro */
+    --preto-200: #0d0d0d; /* Preto suave */
+    --preto-300: #1a1a1a; /* Preto carvão */
+    --preto-400: #262626; /* Preto grafite */
+
+    /* Cinzas */
+    --cinza-100: #333333; /* Cinza escuro */
+    --cinza-200: #4d4d4d; /* Cinza médio escuro */
+    --cinza-300: #808080; /* Cinza neutro */
+    --cinza-400: #b3b3b3; /* Cinza claro */
+
+    /* Dourados */
+    --dourado-100: #d4af37; /* Dourado padrão */
+    --dourado-200: #c19e33; /* Dourado mais fechado */
+    --dourado-300: #b38e1c; /* Dourado envelhecido */
+    --dourado-400: #a57c00; /* Dourado profundo */
+
+    /* Brancos */
+    --branco-100: #ffffff; /* Branco puro */
+    --branco-200: #f8f8f8; /* Branco gelo */
+    --branco-300: #f2f2f2; /* Branco suave */
+    --branco-400: #e6e6e6; /* Branco acinzentado */
+}
