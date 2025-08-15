@@ -32,15 +32,24 @@ header {
 }
 .header-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-
+    justify-content: center;
 }
 i {
     color: var(--branco-100)
 }
-.header-icons {
+.header-logo {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    margin-top: 10px;
+}
 
+.header-logo img {
+    max-width: 120px;  /* Ajuste o valor conforme necessário */
+    height: auto;
+    display: block;
 }
 
 header h1 {
@@ -48,12 +57,15 @@ header h1 {
     font-size: 2.5rem;
 }
 
+/* Centraliza o menu */
 nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
     margin-top: 10px;
+    padding-left: 0;
 }
 
 nav a {
