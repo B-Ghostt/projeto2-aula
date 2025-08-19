@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #e7c66a;
+      background: #e9c460;
       padding: 20px;
     }
 
@@ -54,6 +54,7 @@
     button:hover {
       background-color: #333;
     }
+    
   </style>
 </head>
 <body>
@@ -82,9 +83,14 @@
       <label for="hora">Horário:</label>
       <input type="time" id="hora" name="hora" required>
 
-      <label for="observacoes">Observações (opcional):</label>
-      <textarea id="observacoes" name="observacoes" rows="3"></textarea>
-
+      <div class="horarios">
+  <h3>Horário de Funcionamento</h3>
+  <ul>
+    <li>Segunda: 14hr - 19:20</li>
+    <li>Ter. a Sab. 8h às 12:00 - 14h às 19:20</li>
+    <li>Domingo: Fechado</li>
+  </ul>
+</div>
       <button type="submit">Agendar</button>
     </form>
   </div>
