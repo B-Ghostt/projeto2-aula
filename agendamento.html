@@ -7,7 +7,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #e9c460;
+      background: #e7c66a;
       padding: 20px;
     }
 
@@ -54,7 +54,6 @@
     button:hover {
       background-color: #333;
     }
-    
   </style>
 </head>
 <body>
@@ -67,6 +66,14 @@
 
       <label for="telefone">Telefone:</label>
       <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+
+      <label for="barbeiro">Barbeiro:</label>
+      <select id="barbeiro" name="barbeiro" required>
+        <option value="">Escolha o barbeiro</option>
+        <option value="Gabriel">Gabriel</option>
+        <option value="Pedro Henrique">Pedro Henrique</option>
+        <option value="Eder">Eder</option>
+      </select>
 
       <label for="servico">Serviço:</label>
       <select id="servico" name="servico" required>
@@ -82,8 +89,8 @@
 
       <label for="hora">Horário:</label>
       <input type="time" id="hora" name="hora" required>
-
-      <div class="horarios">
+      
+<div class="horarios">
   <h3>Horário de Funcionamento</h3>
   <ul>
     <li>Segunda: 14hr - 19:20</li>
@@ -91,6 +98,7 @@
     <li>Domingo: Fechado</li>
   </ul>
 </div>
+
       <button type="submit">Agendar</button>
     </form>
   </div>
